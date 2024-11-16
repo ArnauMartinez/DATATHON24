@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import base64
+from training1 import *
 
 # Add a black header that spans the entire width of the page and centers the text
 st.markdown(
@@ -47,6 +48,6 @@ st.markdown('<div class="main-content">', unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload an image", type=["jpg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    #st.image(image, caption="Uploaded Image", use_column_width=True)
+    #st.image(image, caption="Uploaded Image", use_container_width=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
